@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class InputField extends StatefulWidget {
   const InputField({super.key});
@@ -16,11 +17,42 @@ class _InputFieldState extends State<InputField> {
           title: const Text("E Doctor"),
           centerTitle: true,
         ),
-        body: const Padding(
+        body: Padding(
           padding: EdgeInsets.all(10),
-          child: Text(
-            'Patient Form',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          child: Column(
+            children: [
+              Text(
+                'Patient Form',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        labelText: 'Name',
+                        hintText: 'Your Name'),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        labelText: 'Phone',
+                        hintText: 'Phone Number'),
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                  )
+                ],
+              )
+            ],
           ),
         ),
       ),
