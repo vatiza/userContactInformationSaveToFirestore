@@ -41,15 +41,6 @@ class _InputFieldState extends State<InputField> {
                   SizedBox(
                     height: 10,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
-                        labelText: 'Phone',
-                        hintText: 'Phone Number'),
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -63,6 +54,10 @@ class _InputFieldState extends State<InputField> {
                   SizedBox(
                     height: 10,
                   ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.login_sharp),
+                  )
                 ],
               )
             ],
