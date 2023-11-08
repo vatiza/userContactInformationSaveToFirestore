@@ -36,7 +36,7 @@ class _InputFieldState extends State<InputField> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         labelText: 'Name',
-                        hintText: 'Your Name'),
+                        hintText: 'Enter full name'),
                   ),
                   SizedBox(
                     height: 10,
@@ -49,7 +49,20 @@ class _InputFieldState extends State<InputField> {
                         hintText: 'Phone Number'),
                     keyboardType: TextInputType.number,
                     inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  )
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        labelText: 'Email',
+                        hintText: 'email@example.com'),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                 ],
               )
             ],
